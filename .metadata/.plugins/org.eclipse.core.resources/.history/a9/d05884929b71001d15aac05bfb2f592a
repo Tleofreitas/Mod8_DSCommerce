@@ -1,0 +1,22 @@
+package com.devsuperiorT.dscommerce.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration // Classe de configuração
+public class WebSecurityConfig {
+	@Bean
+	BCryptPasswordEncoder bCryptPasswordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+	@Bean // Configuração de Segurança
+	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+	http.authorizeHttpRequests(auth -> auth.anyRequest().permitAll()); // Permitir acessos a requisições
+	http.headers().frameOptions().disable(); // Liberar acesso ao banco H2
+	http.csrf().disable(); // Desabilitar csrf
+	return http.build();
+	}
+}
