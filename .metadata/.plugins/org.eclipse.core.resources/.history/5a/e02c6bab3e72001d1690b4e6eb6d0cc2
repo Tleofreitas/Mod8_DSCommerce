@@ -1,0 +1,5 @@
+package com.devsuperiorT.dscommerce.config;
+
+public class ResourceServerConfig {
+
+}
