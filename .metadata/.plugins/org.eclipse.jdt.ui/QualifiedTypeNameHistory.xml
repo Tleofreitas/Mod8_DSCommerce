@@ -39,4 +39,6 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.core.env.Environment"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

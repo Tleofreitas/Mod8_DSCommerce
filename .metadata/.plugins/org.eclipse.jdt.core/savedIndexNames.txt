@@ -66,8 +66,8 @@ INDEX VERSION 1.131+C:\Users\Thiago\Downloads\DevSuperior\dscommerce\.metadata\.
 2729082514.index
 2423144023.index
 3047462329.index
-3395429548.index
 1784164190.index
+3395429548.index
 1885970177.index
 1670379810.index
 2803600817.index
