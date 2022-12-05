@@ -157,7 +157,14 @@
 							"type": "noauth"
 						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Origin",
+								"value": "http://google.com",
+								"type": "default",
+								"disabled": true
+							}
+						],
 						"url": {
 							"raw": "{{host}}/products/1",
 							"host": [
