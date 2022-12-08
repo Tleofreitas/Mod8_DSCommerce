@@ -233,7 +233,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Meu produto novo\",\r\n    \"description\": \"Lorem ipsum descrição do produto novo\",\r\n    \"imgUrl\": \"\",\r\n    \"price\": 110.0\r\n}",
+							"raw": "{\r\n    \"name\": \"Meu produto novo\",\r\n    \"description\": \"Lorem ipsum descrição do produto novo\",\r\n    \"imgUrl\": \"\",\r\n    \"price\": 110.0,\r\n    \"categories\":[\r\n        {\r\n            \"id\":2\r\n        },\r\n        {\r\n            \"id\":3\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -269,7 +269,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Meu produto novo\",\r\n    \"description\": \"Lorem ipsum descrição do produto novo\",\r\n    \"imgUrl\": \"\",\r\n    \"price\": 112.0\r\n}",
+							"raw": "{\r\n    \"name\": \"Meu produto novo\",\r\n    \"description\": \"Lorem ipsum descrição do produto novo\",\r\n    \"imgUrl\": \"\",\r\n    \"price\": 112.0,\r\n    \"categories\":[\r\n        {\r\n            \"id\":2\r\n        },\r\n        {\r\n            \"id\":3\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -277,13 +277,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/products/26",
+							"raw": "{{host}}/products/1",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"products",
-								"26"
+								"1"
 							]
 						}
 					},
