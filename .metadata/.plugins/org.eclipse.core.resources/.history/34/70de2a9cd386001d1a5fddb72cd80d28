@@ -1,0 +1,27 @@
+package com.devsuperiorT.dscommerce.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.devsuperiorT.dscommerce.dto.OrderDTO;
+
+// Arquitetura por padrão de camadas
+// Aqui é o controlador que chama o serviço
+@RestController // Responder pela web
+@RequestMapping(value = "/orders") // Rota de mapeamento
+public class OrderController {
+
+	@Autowired // Dependencia | Chamando o serviço
+	private OrderService service;
+
+	// Teste com acesso ao banco de dados
+	@GetMapping(value = "/{id}") // Retorno da consulta
+	public ResponseEntity<OrderDTO> findById(@PathVariable Long id) {
+		OrderDTO dto = service.findById(id);
+		return ResponseEntity.ok(dto); // Retorno Customizado
+	}
+}

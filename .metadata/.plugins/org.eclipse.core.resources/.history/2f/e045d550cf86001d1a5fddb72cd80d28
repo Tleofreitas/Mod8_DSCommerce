@@ -1,0 +1,5 @@
+package com.devsuperiorT.dscommerce.dto;
+
+public class ClientDTO {
+
+}

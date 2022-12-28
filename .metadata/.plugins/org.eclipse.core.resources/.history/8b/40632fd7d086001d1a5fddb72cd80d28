@@ -1,0 +1,22 @@
+package com.devsuperiorT.dscommerce.dto;
+
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.devsuperiorT.dscommerce.entities.OrderStatus;
+
+public class OrderDTO {
+	
+	private Long id;
+	private Instant moment;
+	private OrderStatus status;
+	
+	private ClientDTO client;
+	
+	private PaymentDTO payment;
+	
+	private List<OrderItemDTO> items = new ArrayList<>();
+	
+
+}

@@ -78,6 +78,46 @@
 			]
 		},
 		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Order By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "http://google.com",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{host}}/orders/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Product",
 			"item": [
 				{

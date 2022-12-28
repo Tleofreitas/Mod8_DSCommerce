@@ -1,0 +1,14 @@
+package com.devsuperiorT.dscommerce.dto;
+
+import java.time.Instant;
+
+import com.devsuperiorT.dscommerce.entities.OrderStatus;
+
+public class OrderDTO {
+	
+	private Long id;
+	private Instant moment;
+	private OrderStatus status;
+	
+
+}

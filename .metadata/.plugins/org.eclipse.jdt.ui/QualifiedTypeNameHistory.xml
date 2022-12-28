@@ -42,10 +42,13 @@
     <fullyQualifiedTypeName name="org.springframework.web.cors.UrlBasedCorsConfigurationSource"/>
     <fullyQualifiedTypeName name="org.springframework.web.cors.CorsConfigurationSource"/>
     <fullyQualifiedTypeName name="com.devsuperiorT.dscommerce.services.UserService"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.devsuperiorT.dscommerce.entities.User"/>
     <fullyQualifiedTypeName name="org.springframework.security.core.GrantedAuthority"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
     <fullyQualifiedTypeName name="com.devsuperiorT.dscommerce.dto.UserDTO"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.NotEmpty"/>
+    <fullyQualifiedTypeName name="com.devsuperiorT.dscommerce.dto.CategoryDTO"/>
+    <fullyQualifiedTypeName name="com.devsuperiorT.dscommerce.entities.Category"/>
 </qualifiedTypeNameHistroy>
