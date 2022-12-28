@@ -1,0 +1,35 @@
+package com.devsuperiorT.dscommerce.services;
+
+import javax.persistence.EntityNotFoundException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.devsuperiorT.dscommerce.dto.CategoryDTO;
+import com.devsuperiorT.dscommerce.dto.ProductDTO;
+import com.devsuperiorT.dscommerce.dto.ProductMinDTO;
+import com.devsuperiorT.dscommerce.entities.Category;
+import com.devsuperiorT.dscommerce.entities.Product;
+import com.devsuperiorT.dscommerce.repositories.ProductRepository;
+import com.devsuperiorT.dscommerce.services.exceptions.DatabaseException;
+import com.devsuperiorT.dscommerce.services.exceptions.ResourceNotFoundException;
+
+@Service
+public class CategoeyService {
+
+	@Autowired // Dependencia | Chamando o repository
+	private ProductRepository repository;
+
+	// ------- Buscar todos os produtos de forma páginada-------------
+	@Transactional(readOnly = true)
+	public Page<ProductMinDTO> findAll(String name, Pageable pageable) {
+		Page<Product> result = repository.searchByName(name, pageable);
+		return result.map(x -> new ProductMinDTO(x));
+	}
+}
