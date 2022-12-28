@@ -1,0 +1,8 @@
+package com.devsuperiorT.dscommerce.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.devsuperiorT.dscommerce.entities.Order;
+
+public interface OrderItemRepository extends JpaRepository<Order, Long> {
+}

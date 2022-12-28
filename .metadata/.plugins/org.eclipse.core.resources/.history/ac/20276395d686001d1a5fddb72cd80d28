@@ -1,0 +1,26 @@
+package com.devsuperiorT.dscommerce.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.devsuperiorT.dscommerce.dto.OrderDTO;
+import com.devsuperiorT.dscommerce.entities.Order;
+import com.devsuperiorT.dscommerce.repositories.OrderRepository;
+import com.devsuperiorT.dscommerce.services.exceptions.ResourceNotFoundException;
+
+@Service
+public class OrderService {
+	
+	@Autowired // Dependencia | Chamando o repository
+	private OrderRepository repository;
+
+	@Transactional(readOnly = true)
+	public OrderDTO findById(Long id) {
+		Order order = repository.findById(id).
+		// Interceptar excessão e lançar excessão customizada
+				orElseThrow(() -> new ResourceNotFoundException("Recurso não encontrado"));
+		return new OrderDTO(order);
+	}
+
+}
